@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-purple: #7c3aed;
+  --color-brand-pink: #ec4899;
+  --color-brand-red: #e94560;
+  --color-brand-cyan: #06b6d4;
+  --color-bg-light: #f8fafc;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* Custom light scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 58, 237, 0.5);
+}
+
+/* Select option styling in light mode */
+select option {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* Range input in light mode */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(148, 163, 184, 0.3);
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.35);
+  border: 2px solid #ffffff;
+}
+
+/* Light Glass card utility */
+.glass-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+}
+
+/* Vibrant gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #7c3aed, #ec4899, #f43f5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
